@@ -1,0 +1,916 @@
+{
+  "paragraphs": [
+    {
+      "title": "Default Interpreter",
+      "text": "//scala\nutil.Properties.versionMsg\n\n\n//spark context \nsc.version\n",
+      "dateUpdated": "Apr 2, 2018 7:48:10 PM",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res33: String \u003d Scala library version 2.11.8 -- Copyright 2002-2016, LAMP/EPFL\nres37: String \u003d 2.1.0\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1522698490451_-1391815506",
+      "id": "20180326-232132_1700071643",
+      "dateCreated": "Apr 2, 2018 7:48:10 PM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n[source material](https://www.zepl.com/viewer/notebooks/aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2hvcnRvbndvcmtzLWdhbGxlcnkvemVwcGVsaW4tbm90ZWJvb2tzL2hkcC0yLjYvMkNKVzUzTTUyL25vdGUuanNvbg)",
+      "user": "anonymous",
+      "dateUpdated": "Apr 2, 2018 9:25:05 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003e\u003ca href\u003d\"https://www.zepl.com/viewer/notebooks/aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2hvcnRvbndvcmtzLWdhbGxlcnkvemVwcGVsaW4tbm90ZWJvb2tzL2hkcC0yLjYvMkNKVzUzTTUyL25vdGUuanNvbg\"\u003esource material\u003c/a\u003e\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1522704227191_1963652092",
+      "id": "20180402-212347_1417268910",
+      "dateCreated": "Apr 2, 2018 9:23:47 PM",
+      "dateStarted": "Apr 2, 2018 9:25:05 PM",
+      "dateFinished": "Apr 2, 2018 9:25:05 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sh\n\n# You will now download a subset of 2008 flights (only 100k lines)\n# The full dataset may be found here: http://stat-computing.org/dataexpo/2009/the-data.html\n\nwget https://raw.githubusercontent.com/roberthryniewicz/datasets/master/airline-dataset/flights/flights.csv -O /tmp/flights.csv\necho \"Downloaded!\"\n",
+      "dateUpdated": "Apr 2, 2018 7:48:10 PM",
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/sh",
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "sh",
+          "editOnDblClick": false
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "--2018-04-02 16:35:31--  https://raw.githubusercontent.com/roberthryniewicz/datasets/master/airline-dataset/flights/flights.csv\nResolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...\nConnecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.0.133|:443... connected.\nHTTP request sent, awaiting response... 200 OK\nLength: 9719582 (9.3M) [text/plain]\nSaving to: ‘/tmp/flights.csv’\n\n     0K .......... .......... .......... .......... ..........  0%  434K 22s\n    50K .......... .......... .......... .......... ..........  1%  847K 16s\n   100K .......... .......... .......... .......... ..........  1%  352K 20s\n   150K .......... .......... .......... .......... ..........  2%  496K 19s\n   200K .......... .......... .......... .......... ..........  2%  445K 20s\n   250K .......... .......... .......... .......... ..........  3%  492K 19s\n   300K .......... .......... .......... .......... ..........  3%  524K 19s\n   350K .......... .......... .......... .......... ..........  4%  484K 19s\n   400K .......... .......... .......... .......... ..........  4%  542K 19s\n   450K .......... .......... .......... .......... ..........  5%  436K 19s\n   500K .......... .......... .......... .......... ..........  5%  427K 19s\n   550K .......... .......... .......... .......... ..........  6%  455K 19s\n   600K .......... .......... .......... .......... ..........  6%  503K 19s\n   650K .......... .......... .......... .......... ..........  7%  543K 18s\n   700K .......... .......... .......... .......... ..........  7%  494K 18s\n   750K .......... .......... .......... .......... ..........  8%  533K 18s\n   800K .......... .......... .......... .......... ..........  8%  749K 17s\n   850K .......... .......... .......... .......... ..........  9% 1021K 17s\n   900K .......... .......... .......... .......... .......... 10% 1.01M 16s\n   950K .......... .......... .......... .......... .......... 10% 1.58M 16s\n  1000K .......... .......... .......... .......... .......... 11%  851K 15s\n  1050K .......... .......... .......... .......... .......... 11%  720K 15s\n  1100K .......... .......... .......... .......... .......... 12%  271K 16s\n  1150K .......... .......... .......... .......... .......... 12%  911K 15s\n  1200K .......... .......... .......... .......... .......... 13%  402K 15s\n  1250K .......... .......... .......... .......... .......... 13%  247K 16s\n  1300K .......... .......... .......... .......... .......... 14%  285K 16s\n  1350K .......... .......... .......... .......... .......... 14%  472K 16s\n  1400K .......... .......... .......... .......... .......... 15%  454K 16s\n  1450K .......... .......... .......... .......... .......... 15%  503K 16s\n  1500K .......... .......... .......... .......... .......... 16%  519K 16s\n  1550K .......... .......... .......... .......... .......... 16%  509K 16s\n  1600K .......... .......... .......... .......... .......... 17%  493K 16s\n  1650K .......... .......... .......... .......... .......... 17%  492K 16s\n  1700K .......... .......... .......... .......... .......... 18%  385K 16s\n  1750K .......... .......... .......... .......... .......... 18%  486K 16s\n  1800K .......... .......... .......... .......... .......... 19%  478K 16s\n  1850K .......... .......... .......... .......... .......... 20%  439K 16s\n  1900K .......... .......... .......... .......... .......... 20%  500K 15s\n  1950K .......... .......... .......... .......... .......... 21%  476K 15s\n  2000K .......... .......... .......... .......... .......... 21%  569K 15s\n  2050K .......... .......... .......... .......... .......... 22%  851K 15s\n  2100K .......... .......... .......... .......... .......... 22%  997K 15s\n  2150K .......... .......... .......... .......... .......... 23% 1.62M 14s\n  2200K .......... .......... .......... .......... .......... 23% 1.87M 14s\n  2250K .......... .......... .......... .......... .......... 24% 1.92M 14s\n  2300K .......... .......... .......... .......... .......... 24% 1.87M 13s\n  2350K .......... .......... .......... .......... .......... 25% 2.66M 13s\n  2400K .......... .......... .......... .......... .......... 25% 2.10M 13s\n  2450K .......... .......... .......... .......... .......... 26% 1.79M 12s\n  2500K .......... .......... .......... .......... .......... 26% 2.70M 12s\n  2550K .......... .......... .......... .......... .......... 27% 1.64M 12s\n  2600K .......... .......... .......... .......... .......... 27% 2.78M 12s\n  2650K .......... .......... .......... .......... .......... 28% 1.16M 11s\n  2700K .......... .......... .......... .......... .......... 28% 1.06M 11s\n  2750K .......... .......... .......... .......... .......... 29% 1.19M 11s\n  2800K .......... .......... .......... .......... .......... 30% 1.04M 11s\n  2850K .......... .......... .......... .......... .......... 30% 1.47M 11s\n  2900K .......... .......... .......... .......... .......... 31% 1.62M 11s\n  2950K .......... .......... .......... .......... .......... 31% 1.21M 10s\n  3000K .......... .......... .......... .......... .......... 32% 1.21M 10s\n  3050K .......... .......... .......... .......... .......... 32% 1.17M 10s\n  3100K .......... .......... .......... .......... .......... 33% 1.19M 10s\n  3150K .......... .......... .......... .......... .......... 33% 1.20M 10s\n  3200K .......... .......... .......... .......... .......... 34% 1.20M 10s\n  3250K .......... .......... .......... .......... .......... 34% 1.18M 9s\n  3300K .......... .......... .......... .......... .......... 35% 1.18M 9s\n  3350K .......... .......... .......... .......... .......... 35% 1.24M 9s\n  3400K .......... .......... .......... .......... .......... 36% 1.18M 9s\n  3450K .......... .......... .......... .......... .......... 36% 1.25M 9s\n  3500K .......... .......... .......... .......... .......... 37%  993K 9s\n  3550K .......... .......... .......... .......... .......... 37% 1.22M 9s\n  3600K .......... .......... .......... .......... .......... 38% 1.22M 9s\n  3650K .......... .......... .......... .......... .......... 38% 1.21M 8s\n  3700K .......... .......... .......... .......... .......... 39% 1.09M 8s\n  3750K .......... .......... .......... .......... .......... 40% 1.84M 8s\n  3800K .......... .......... .......... .......... .......... 40% 1.21M 8s\n  3850K .......... .......... .......... .......... .......... 41% 1.19M 8s\n  3900K .......... .......... .......... .......... .......... 41% 1003K 8s\n  3950K .......... .......... .......... .......... .......... 42% 1.21M 8s\n  4000K .......... .......... .......... .......... .......... 42% 1.25M 8s\n  4050K .......... .......... .......... .......... .......... 43% 1.20M 8s\n  4100K .......... .......... .......... .......... .......... 43% 1.20M 7s\n  4150K .......... .......... .......... .......... .......... 44% 1.20M 7s\n  4200K .......... .......... .......... .......... .......... 44% 1.24M 7s\n  4250K .......... .......... .......... .......... .......... 45% 1.22M 7s\n  4300K .......... .......... .......... .......... .......... 45%  997K 7s\n  4350K .......... .......... .......... .......... .......... 46% 1.19M 7s\n  4400K .......... .......... .......... .......... .......... 46% 1.56M 7s\n  4450K .......... .......... .......... .......... .......... 47% 1.17M 7s\n  4500K .......... .......... .......... .......... .......... 47% 1.24M 7s\n  4550K .......... .......... .......... .......... .......... 48% 1.23M 6s\n  4600K .......... .......... .......... .......... .......... 48% 1.22M 6s\n  4650K .......... .......... .......... .......... .......... 49% 1.19M 6s\n  4700K .......... .......... .......... .......... .......... 50%  999K 6s\n  4750K .......... .......... .......... .......... .......... 50% 1.21M 6s\n  4800K .......... .......... .......... .......... .......... 51% 1.23M 6s\n  4850K .......... .......... .......... .......... .......... 51% 1.16M 6s\n  4900K .......... .......... .......... .......... .......... 52% 1.66M 6s\n  4950K .......... .......... .......... .......... .......... 52% 1.16M 6s\n  5000K .......... .......... .......... .......... .......... 53% 1.27M 6s\n  5050K .......... .......... .......... .......... .......... 53% 1.22M 6s\n  5100K .......... .......... .......... .......... .......... 54%  840K 6s\n  5150K .......... .......... .......... .......... .......... 54% 1.20M 5s\n  5200K .......... .......... .......... .......... .......... 55% 1.18M 5s\n  5250K .......... .......... .......... .......... .......... 55% 1.21M 5s\n  5300K .......... .......... .......... .......... .......... 56% 1.61M 5s\n  5350K .......... .......... .......... .......... .......... 56% 1.21M 5s\n  5400K .......... .......... .......... .......... .......... 57% 1.22M 5s\n  5450K .......... .......... .......... .......... .......... 57% 1.21M 5s\n  5500K .......... .......... .......... .......... .......... 58%  997K 5s\n  5550K .......... .......... .......... .......... .......... 58% 1.16M 5s\n  5600K .......... .......... .......... .......... .......... 59% 1.24M 5s\n  5650K .......... .......... .......... .......... .......... 60% 1.23M 5s\n  5700K .......... .......... .......... .......... .......... 60% 1.20M 5s\n  5750K .......... .......... .......... .......... .......... 61% 1.23M 5s\n  5800K .......... .......... .......... .......... .......... 61% 1.19M 4s\n  5850K .......... .......... .......... .......... .......... 62% 1.67M 4s\n  5900K .......... .......... .......... .......... .......... 62% 1001K 4s\n  5950K .......... .......... .......... .......... .......... 63% 1.19M 4s\n  6000K .......... .......... .......... .......... .......... 63% 1.22M 4s\n  6050K .......... .......... .......... .......... .......... 64% 1.20M 4s\n  6100K .......... .......... .......... .......... .......... 64%  984K 4s\n  6150K .......... .......... .......... .......... .......... 65% 1.64M 4s\n  6200K .......... .......... .......... .......... .......... 65% 1.21M 4s\n  6250K .......... .......... .......... .......... .......... 66% 1.22M 4s\n  6300K .......... .......... .......... .......... .......... 66%  948K 4s\n  6350K .......... .......... .......... .......... .......... 67% 1.29M 4s\n  6400K .......... .......... .......... .......... .......... 67% 1.22M 4s\n  6450K .......... .......... .......... .......... .......... 68% 1.21M 4s\n  6500K .......... .......... .......... .......... .......... 69% 1.20M 3s\n  6550K .......... .......... .......... .......... .......... 69% 1.20M 3s\n  6600K .......... .......... .......... .......... .......... 70% 1.24M 3s\n  6650K .......... .......... .......... .......... .......... 70% 1.22M 3s\n  6700K .......... .......... .......... .......... .......... 71%  980K 3s\n  6750K .......... .......... .......... .......... .......... 71% 1000K 3s\n  6800K .......... .......... .......... .......... .......... 72% 1.63M 3s\n  6850K .......... .......... .......... .......... .......... 72% 1.21M 3s\n  6900K .......... .......... .......... .......... .......... 73% 1.20M 3s\n  6950K .......... .......... .......... .......... .......... 73% 1.21M 3s\n  7000K .......... .......... .......... .......... .......... 74% 1.21M 3s\n  7050K .......... .......... .......... .......... .......... 74% 1.23M 3s\n  7100K .......... .......... .......... .......... .......... 75%  997K 3s\n  7150K .......... .......... .......... .......... .......... 75% 1.20M 3s\n  7200K .......... .......... .......... .......... .......... 76% 1.23M 3s\n  7250K .......... .......... .......... .......... .......... 76% 1.18M 3s\n  7300K .......... .......... .......... .......... .......... 77% 1.08M 2s\n  7350K .......... .......... .......... .......... .......... 77% 1.40M 2s\n  7400K .......... .......... .......... .......... .......... 78% 1.20M 2s\n  7450K .......... .......... .......... .......... .......... 79% 1.17M 2s\n  7500K .......... .......... .......... .......... .......... 79% 1.00M 2s\n  7550K .......... .......... .......... .......... .......... 80% 1.23M 2s\n  7600K .......... .......... .......... .......... .......... 80% 1.20M 2s\n  7650K .......... .......... .......... .......... .......... 81% 1.22M 2s\n  7700K .......... .......... .......... .......... .......... 81% 1.21M 2s\n  7750K .......... .......... .......... .......... .......... 82% 1.19M 2s\n  7800K .......... .......... .......... .......... .......... 82% 1.57M 2s\n  7850K .......... .......... .......... .......... .......... 83% 1.23M 2s\n  7900K .......... .......... .......... .......... .......... 83% 1013K 2s\n  7950K .......... .......... .......... .......... .......... 84% 1.21M 2s\n  8000K .......... .......... .......... .......... .......... 84% 1.08M 2s\n  8050K .......... .......... .......... .......... .......... 85% 1.91M 2s\n  8100K .......... .......... .......... .......... .......... 85% 1.22M 1s\n  8150K .......... .......... .......... .......... .......... 86% 1.19M 1s\n  8200K .......... .......... .......... .......... .......... 86% 1.24M 1s\n  8250K .......... .......... .......... .......... .......... 87% 1.21M 1s\n  8300K .......... .......... .......... .......... .......... 87%  997K 1s\n  8350K .......... .......... .......... .......... .......... 88%  993K 1s\n  8400K .......... .......... .......... .......... .......... 89% 1.16M 1s\n  8450K .......... .......... .......... .......... .......... 89% 1.15M 1s\n  8500K .......... .......... .......... .......... .......... 90% 1.34M 1s\n  8550K .......... .......... .......... .......... .......... 90%  621K 1s\n  8600K .......... .......... .......... .......... .......... 91%  329K 1s\n  8650K .......... .......... .......... .......... .......... 91%  825K 1s\n  8700K .......... .......... .......... .......... .......... 92%  355K 1s\n  8750K .......... .......... .......... .......... .......... 92% 1.65M 1s\n  8800K .......... .......... .......... .......... .......... 93% 2.42M 1s\n  8850K .......... .......... .......... .......... .......... 93%  383K 1s\n  8900K .......... .......... .......... .......... .......... 94% 4.28M 1s\n  8950K .......... .......... .......... .......... .......... 94%  898K 1s\n  9000K .......... .......... .......... .......... .......... 95%  948K 0s\n  9050K .......... .......... .......... .......... .......... 95% 1.12M 0s\n  9100K .......... .......... .......... .......... .......... 96%  900K 0s\n  9150K .......... .......... .......... .......... .......... 96% 1.16M 0s\n  9200K .......... .......... .......... .......... .......... 97% 1.26M 0s\n  9250K .......... .......... .......... .......... .......... 97% 1.20M 0s\n  9300K .......... .......... .......... .......... .......... 98% 1.26M 0s\n  9350K .......... .......... .......... .......... .......... 99% 1.41M 0s\n  9400K .......... .......... .......... .......... .......... 99% 1.30M 0s\n  9450K .......... .......... .......... .......... .         100% 1.33M\u003d10s\n\n2018-04-02 16:35:43 (908 KB/s) - ‘/tmp/flights.csv’ saved [9719582/9719582]\n\nDownloaded!\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1522698490465_-1411052951",
+      "id": "20180402-163407_1607950699",
+      "dateCreated": "Apr 2, 2018 7:48:10 PM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sh\n\ncat /tmp/flights.csv | head -n 3",
+      "dateUpdated": "Apr 2, 2018 7:48:10 PM",
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/sh",
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "sh",
+          "editOnDblClick": false
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Year,Month,DayofMonth,DayOfWeek,DepTime,CRSDepTime,ArrTime,CRSArrTime,UniqueCarrier,FlightNum,TailNum,ActualElapsedTime,CRSElapsedTime,AirTime,ArrDelay,DepDelay,Origin,Dest,Distance,TaxiIn,TaxiOut,Cancelled,CancellationCode,Diverted,CarrierDelay,WeatherDelay,NASDelay,SecurityDelay,LateAircraftDelay\n2008,1,3,4,2003,1955,2211,2225,WN,335,N712SW,128,150,116,-14,8,IAD,TPA,810,4,8,0,,0,NA,NA,NA,NA,NA\n2008,1,3,4,754,735,1002,1000,WN,3231,N772SW,128,145,113,2,19,IAD,TPA,810,5,10,0,,0,NA,NA,NA,NA,NA\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1522698490466_-1409898704",
+      "id": "20180402-163529_1132735348",
+      "dateCreated": "Apr 2, 2018 7:48:10 PM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sh\nwc -l /tmp/flights.csv",
+      "dateUpdated": "Apr 2, 2018 7:48:10 PM",
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "100000 /tmp/flights.csv\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1522698490473_-1414130942",
+      "id": "20180402-163639_710492570",
+      "dateCreated": "Apr 2, 2018 7:48:10 PM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n\n// Create a flights DataFrame from CSV file\nval flights \u003d spark.read\n              .option(\"header\", \"true\")                              // Use first line as header\n              .option(\"inferSchema\", \"true\")                         // Infer schema\n              .csv(\"/tmp/flights.csv\")                               // Read data\n",
+      "dateUpdated": "Apr 2, 2018 7:48:10 PM",
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "flights: org.apache.spark.sql.DataFrame \u003d [Year: int, Month: int ... 27 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1522698490476_-1415285189",
+      "id": "20180402-164009_1623282351",
+      "dateCreated": "Apr 2, 2018 7:48:10 PM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Print Schema",
+      "text": "%spark\n\n// Print the schema in a tree format\nflights.printSchema()",
+      "dateUpdated": "Apr 2, 2018 7:48:10 PM",
+      "config": {
+        "editorSetting": {
+          "language": "scala"
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- Year: integer (nullable \u003d true)\n |-- Month: integer (nullable \u003d true)\n |-- DayofMonth: integer (nullable \u003d true)\n |-- DayOfWeek: integer (nullable \u003d true)\n |-- DepTime: string (nullable \u003d true)\n |-- CRSDepTime: integer (nullable \u003d true)\n |-- ArrTime: string (nullable \u003d true)\n |-- CRSArrTime: integer (nullable \u003d true)\n |-- UniqueCarrier: string (nullable \u003d true)\n |-- FlightNum: integer (nullable \u003d true)\n |-- TailNum: string (nullable \u003d true)\n |-- ActualElapsedTime: string (nullable \u003d true)\n |-- CRSElapsedTime: integer (nullable \u003d true)\n |-- AirTime: string (nullable \u003d true)\n |-- ArrDelay: string (nullable \u003d true)\n |-- DepDelay: string (nullable \u003d true)\n |-- Origin: string (nullable \u003d true)\n |-- Dest: string (nullable \u003d true)\n |-- Distance: integer (nullable \u003d true)\n |-- TaxiIn: string (nullable \u003d true)\n |-- TaxiOut: string (nullable \u003d true)\n |-- Cancelled: integer (nullable \u003d true)\n |-- CancellationCode: string (nullable \u003d true)\n |-- Diverted: integer (nullable \u003d true)\n |-- CarrierDelay: string (nullable \u003d true)\n |-- WeatherDelay: string (nullable \u003d true)\n |-- NASDelay: string (nullable \u003d true)\n |-- SecurityDelay: string (nullable \u003d true)\n |-- LateAircraftDelay: string (nullable \u003d true)\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1522698490477_-1415669938",
+      "id": "20180402-164342_2145372181",
+      "dateCreated": "Apr 2, 2018 7:48:10 PM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Temporary View",
+      "text": "%spark\n\n// Convert flights DataFrame to a temporary view\nflights.createOrReplaceTempView(\"flightsView\")",
+      "user": "anonymous",
+      "dateUpdated": "Apr 2, 2018 9:21:14 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1522704013783_1456462741",
+      "id": "20180402-212013_723805503",
+      "dateCreated": "Apr 2, 2018 9:20:13 PM",
+      "dateStarted": "Apr 2, 2018 9:21:14 PM",
+      "dateFinished": "Apr 2, 2018 9:21:16 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark.sql\n\n//sql syntax works with the view\n\nSELECT * FROM flightsView LIMIT 20",
+      "user": "anonymous",
+      "dateUpdated": "Apr 2, 2018 9:25:43 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "Year\tMonth\tDayofMonth\tDayOfWeek\tDepTime\tCRSDepTime\tArrTime\tCRSArrTime\tUniqueCarrier\tFlightNum\tTailNum\tActualElapsedTime\tCRSElapsedTime\tAirTime\tArrDelay\tDepDelay\tOrigin\tDest\tDistance\tTaxiIn\tTaxiOut\tCancelled\tCancellationCode\tDiverted\tCarrierDelay\tWeatherDelay\tNASDelay\tSecurityDelay\tLateAircraftDelay\n2008\t1\t3\t4\t2003\t1955\t2211\t2225\tWN\t335\tN712SW\t128\t150\t116\t-14\t8\tIAD\tTPA\t810\t4\t8\t0\tnull\t0\tNA\tNA\tNA\tNA\tNA\n2008\t1\t3\t4\t754\t735\t1002\t1000\tWN\t3231\tN772SW\t128\t145\t113\t2\t19\tIAD\tTPA\t810\t5\t10\t0\tnull\t0\tNA\tNA\tNA\tNA\tNA\n2008\t1\t3\t4\t628\t620\t804\t750\tWN\t448\tN428WN\t96\t90\t76\t14\t8\tIND\tBWI\t515\t3\t17\t0\tnull\t0\tNA\tNA\tNA\tNA\tNA\n2008\t1\t3\t4\t926\t930\t1054\t1100\tWN\t1746\tN612SW\t88\t90\t78\t-6\t-4\tIND\tBWI\t515\t3\t7\t0\tnull\t0\tNA\tNA\tNA\tNA\tNA\n2008\t1\t3\t4\t1829\t1755\t1959\t1925\tWN\t3920\tN464WN\t90\t90\t77\t34\t34\tIND\tBWI\t515\t3\t10\t0\tnull\t0\t2\t0\t0\t0\t32\n2008\t1\t3\t4\t1940\t1915\t2121\t2110\tWN\t378\tN726SW\t101\t115\t87\t11\t25\tIND\tJAX\t688\t4\t10\t0\tnull\t0\tNA\tNA\tNA\tNA\tNA\n2008\t1\t3\t4\t1937\t1830\t2037\t1940\tWN\t509\tN763SW\t240\t250\t230\t57\t67\tIND\tLAS\t1591\t3\t7\t0\tnull\t0\t10\t0\t0\t0\t47\n2008\t1\t3\t4\t1039\t1040\t1132\t1150\tWN\t535\tN428WN\t233\t250\t219\t-18\t-1\tIND\tLAS\t1591\t7\t7\t0\tnull\t0\tNA\tNA\tNA\tNA\tNA\n2008\t1\t3\t4\t617\t615\t652\t650\tWN\t11\tN689SW\t95\t95\t70\t2\t2\tIND\tMCI\t451\t6\t19\t0\tnull\t0\tNA\tNA\tNA\tNA\tNA\n2008\t1\t3\t4\t1620\t1620\t1639\t1655\tWN\t810\tN648SW\t79\t95\t70\t-16\t0\tIND\tMCI\t451\t3\t6\t0\tnull\t0\tNA\tNA\tNA\tNA\tNA\n2008\t1\t3\t4\t706\t700\t916\t915\tWN\t100\tN690SW\t130\t135\t106\t1\t6\tIND\tMCO\t828\t5\t19\t0\tnull\t0\tNA\tNA\tNA\tNA\tNA\n2008\t1\t3\t4\t1644\t1510\t1845\t1725\tWN\t1333\tN334SW\t121\t135\t107\t80\t94\tIND\tMCO\t828\t6\t8\t0\tnull\t0\t8\t0\t0\t0\t72\n2008\t1\t3\t4\t1426\t1430\t1426\t1425\tWN\t829\tN476WN\t60\t55\t39\t1\t-4\tIND\tMDW\t162\t9\t12\t0\tnull\t0\tNA\tNA\tNA\tNA\tNA\n2008\t1\t3\t4\t715\t715\t720\t710\tWN\t1016\tN765SW\t65\t55\t37\t10\t0\tIND\tMDW\t162\t7\t21\t0\tnull\t0\tNA\tNA\tNA\tNA\tNA\n2008\t1\t3\t4\t1702\t1700\t1651\t1655\tWN\t1827\tN420WN\t49\t55\t35\t-4\t2\tIND\tMDW\t162\t4\t10\t0\tnull\t0\tNA\tNA\tNA\tNA\tNA\n2008\t1\t3\t4\t1029\t1020\t1021\t1010\tWN\t2272\tN263WN\t52\t50\t37\t11\t9\tIND\tMDW\t162\t6\t9\t0\tnull\t0\tNA\tNA\tNA\tNA\tNA\n2008\t1\t3\t4\t1452\t1425\t1640\t1625\tWN\t675\tN286WN\t228\t240\t213\t15\t27\tIND\tPHX\t1489\t7\t8\t0\tnull\t0\t3\t0\t0\t0\t12\n2008\t1\t3\t4\t754\t745\t940\t955\tWN\t1144\tN778SW\t226\t250\t205\t-15\t9\tIND\tPHX\t1489\t5\t16\t0\tnull\t0\tNA\tNA\tNA\tNA\tNA\n2008\t1\t3\t4\t1323\t1255\t1526\t1510\tWN\t4\tN674AA\t123\t135\t110\t16\t28\tIND\tTPA\t838\t4\t9\t0\tnull\t0\t0\t0\t0\t0\t16\n2008\t1\t3\t4\t1416\t1325\t1512\t1435\tWN\t54\tN643SW\t56\t70\t49\t37\t51\tISP\tBWI\t220\t2\t5\t0\tnull\t0\t12\t0\t0\t0\t25\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1522704014678_1013616757",
+      "id": "20180402-212014_79142461",
+      "dateCreated": "Apr 2, 2018 9:20:14 PM",
+      "dateStarted": "Apr 2, 2018 9:21:44 PM",
+      "dateFinished": "Apr 2, 2018 9:21:46 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n// Register a helper UDF to find delayed flights\n// Note that this is a UDF specific for use with the sparkSession\n\n// Assume:\n//  if ArrDelay is not available then Delayed \u003d False\n//  if ArrDelay \u003e 15 min then Delayed \u003d True else False\n\nspark.udf.register(\"isDelayedUDF\", (time: String) \u003d\u003e if (time \u003d\u003d \"NA\") 0 else if (time.toInt \u003e 15) 1 else 0)",
+      "user": "anonymous",
+      "dateUpdated": "Apr 2, 2018 9:26:41 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res85: org.apache.spark.sql.expressions.UserDefinedFunction \u003d UserDefinedFunction(\u003cfunction1\u003e,IntegerType,Some(List(StringType)))\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1522704104786_-261166907",
+      "id": "20180402-212144_2133752546",
+      "dateCreated": "Apr 2, 2018 9:21:44 PM",
+      "dateStarted": "Apr 2, 2018 9:26:41 PM",
+      "dateFinished": "Apr 2, 2018 9:26:44 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark.sql\n--- Compare Total Number of Delayed Flights by Carrier\nSELECT UniqueCarrier, SUM(isDelayedUDF(DepDelay)) AS NumDelays FROM flightsView GROUP BY UniqueCarrier",
+      "user": "anonymous",
+      "dateUpdated": "Apr 2, 2018 9:27:55 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 85.5333,
+              "optionOpen": false
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "UniqueCarrier\tNumDelays\nXE\t1014\nWN\t18573\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1522704401002_559165889",
+      "id": "20180402-212641_1280740321",
+      "dateCreated": "Apr 2, 2018 9:26:41 PM",
+      "dateStarted": "Apr 2, 2018 9:27:37 PM",
+      "dateFinished": "Apr 2, 2018 9:27:43 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark.sql\n--- Compare Total Delayed Time (min) by Carrier\nSELECT UniqueCarrier, SUM(DepDelay) AS TotalTimeDelay FROM flightsView GROUP BY UniqueCarrier",
+      "user": "anonymous",
+      "dateUpdated": "Apr 2, 2018 9:29:27 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 85.5333,
+              "optionOpen": false
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "sql"
+        },
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "UniqueCarrier\tTotalTimeDelay\nXE\t47505.0\nWN\t978547.0\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1522704457838_-943385835",
+      "id": "20180402-212737_944206380",
+      "dateCreated": "Apr 2, 2018 9:27:37 PM",
+      "dateStarted": "Apr 2, 2018 9:29:16 PM",
+      "dateFinished": "Apr 2, 2018 9:29:21 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Find Average Distance Travelled by Carrier",
+      "text": "%spark.sql\n--- Find Average Distance Travelled by Carrier\nSELECT UniqueCarrier, avg(Distance) AS AvgDistanceTraveled FROM flightsView GROUP BY UniqueCarrier ORDER BY AvgDistanceTraveled DESC",
+      "user": "anonymous",
+      "dateUpdated": "Apr 2, 2018 9:33:17 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 115.533,
+              "optionOpen": false
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "sql"
+        },
+        "editorMode": "ace/mode/sql",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "UniqueCarrier\tAvgDistanceTraveled\nXE\t738.0677880571909\nWN\t623.7926638668864\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1522704556513_-1069629447",
+      "id": "20180402-212916_2031989916",
+      "dateCreated": "Apr 2, 2018 9:29:16 PM",
+      "dateStarted": "Apr 2, 2018 9:30:03 PM",
+      "dateFinished": "Apr 2, 2018 9:30:09 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Find Out When Most Flights Get Delayed by Day of Week",
+      "text": "%spark.sql\nSELECT DayOfWeek, CASE WHEN isDelayedUDF(DepDelay) \u003d 1 THEN \u0027delayed\u0027 ELSE \u0027ok\u0027 END AS Delay, COUNT(1) AS Count\nFROM flightsView\nGROUP BY DayOfWeek, CASE WHEN isDelayedUDF(DepDelay) \u003d 1 THEN \u0027delayed\u0027 ELSE \u0027ok\u0027 END\nORDER BY DayOfWeek",
+      "user": "anonymous",
+      "dateUpdated": "Apr 2, 2018 9:33:04 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "sql"
+        },
+        "editorMode": "ace/mode/sql",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "DayOfWeek\tDelay\tCount\n1\tdelayed\t2656\n1\tok\t11863\n2\tdelayed\t1799\n2\tok\t12911\n3\tdelayed\t1434\n3\tok\t13260\n4\tdelayed\t4808\n4\tok\t12271\n5\tok\t11003\n5\tdelayed\t3514\n6\tok\t9407\n6\tdelayed\t1878\n7\tok\t9698\n7\tdelayed\t3498\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1522704603931_1543797976",
+      "id": "20180402-213003_2146822596",
+      "dateCreated": "Apr 2, 2018 9:30:03 PM",
+      "dateStarted": "Apr 2, 2018 9:30:21 PM",
+      "dateFinished": "Apr 2, 2018 9:30:27 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Find Out When Most Flights Get Delayed by Hour",
+      "text": "%spark.sql\n\nSELECT CAST(CRSDepTime / 100 AS INT) AS Hour, CASE WHEN isDelayedUDF(DepDelay) \u003d 1 THEN \u0027delayed\u0027 ELSE \u0027ok\u0027 END AS Delay, COUNT(1) AS Count\nFROM flightsView\nGROUP BY CAST(CRSDepTime / 100 AS INT), CASE WHEN isDelayedUDF(DepDelay) \u003d 1 THEN \u0027delayed\u0027 ELSE \u0027ok\u0027 END\nORDER BY Hour",
+      "user": "anonymous",
+      "dateUpdated": "Apr 2, 2018 9:33:58 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false
+            },
+            "helium": {}
+          }
+        },
+        "editorSetting": {
+          "language": "sql"
+        },
+        "editorMode": "ace/mode/sql",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "Hour\tDelay\tCount\n6\tdelayed\t208\n6\tok\t6126\n7\tok\t7274\n7\tdelayed\t372\n8\tdelayed\t547\n8\tok\t5956\n9\tok\t5861\n9\tdelayed\t761\n10\tdelayed\t903\n10\tok\t5783\n11\tdelayed\t986\n11\tok\t5115\n12\tok\t5174\n12\tdelayed\t1128\n13\tok\t5225\n13\tdelayed\t1346\n14\tok\t4434\n14\tdelayed\t1335\n15\tdelayed\t1562\n15\tok\t4818\n16\tdelayed\t1750\n16\tok\t4810\n17\tok\t4632\n17\tdelayed\t1802\n18\tok\t4720\n18\tdelayed\t1912\n19\tok\t4461\n19\tdelayed\t2001\n20\tdelayed\t1684\n20\tok\t3526\n21\tok\t2286\n21\tdelayed\t1194\n22\tok\t212\n22\tdelayed\t96\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1522704621720_-1538394814",
+      "id": "20180402-213021_1503702446",
+      "dateCreated": "Apr 2, 2018 9:30:21 PM",
+      "dateStarted": "Apr 2, 2018 9:33:24 PM",
+      "dateFinished": "Apr 2, 2018 9:33:29 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "What Tables are available",
+      "text": "%spark.sql\nSHOW TABLES",
+      "user": "anonymous",
+      "dateUpdated": "Apr 2, 2018 9:38:18 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 85.5333,
+              "optionOpen": false
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "sql"
+        },
+        "editorMode": "ace/mode/sql",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "database\ttableName\tisTemporary\n\tflightsview\ttrue\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1522704804896_-864990649",
+      "id": "20180402-213324_585696210",
+      "dateCreated": "Apr 2, 2018 9:33:24 PM",
+      "dateStarted": "Apr 2, 2018 9:37:46 PM",
+      "dateFinished": "Apr 2, 2018 9:37:47 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Persist Temporary View",
+      "text": "%spark\nimport org.apache.spark.sql.SaveMode\n\n// Save and Overwrite our new DataFrame to an ORC file\nflightsWithDelays.write.format(\"orc\").mode(SaveMode.Overwrite).save(\"data/flightsWithDelays.orc\")\n\n\n// ORC: Optimized Row-Column ; optimized for large streaming reads, but with integrated support for finding required rows quickly.",
+      "user": "anonymous",
+      "dateUpdated": "Apr 2, 2018 9:44:43 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import org.apache.spark.sql.SaveMode\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1522705065929_501620475",
+      "id": "20180402-213745_1269328121",
+      "dateCreated": "Apr 2, 2018 9:37:45 PM",
+      "dateStarted": "Apr 2, 2018 9:42:43 PM",
+      "dateFinished": "Apr 2, 2018 9:42:47 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sh\nls data/",
+      "user": "anonymous",
+      "dateUpdated": "Apr 2, 2018 9:43:02 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "sh",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/sh"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "flightsWithDelays.orc\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1522705314219_-1679968730",
+      "id": "20180402-214154_1498340255",
+      "dateCreated": "Apr 2, 2018 9:41:54 PM",
+      "dateStarted": "Apr 2, 2018 9:43:02 PM",
+      "dateFinished": "Apr 2, 2018 9:43:02 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Load back in ORC file",
+      "text": "%spark\n// Load results back from ORC file\nval test \u003d spark.read.format(\"orc\").load(\"data/flightsWithDelays.orc\")\n\n// Assert both DataFrames of the same size.\n//   Note that if assertion succeeds no warning messages will be printed\nassert (test.count \u003d\u003d flightsWithDelays.count, println(\"Assertion Fail: Files are of different sizes.\"))\n\ntest.show(10)",
+      "user": "anonymous",
+      "dateUpdated": "Apr 2, 2018 9:43:11 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "test: org.apache.spark.sql.DataFrame \u003d [Year: int, Month: int ... 5 more fields]\n+----+-----+----------+-------------+---------+--------+---------+\n|Year|Month|DayofMonth|UniqueCarrier|FlightNum|DepDelay|IsDelayed|\n+----+-----+----------+-------------+---------+--------+---------+\n|2008|    1|         3|           WN|      335|       8|        0|\n|2008|    1|         3|           WN|     3231|      19|        1|\n|2008|    1|         3|           WN|      448|       8|        0|\n|2008|    1|         3|           WN|     1746|      -4|        0|\n|2008|    1|         3|           WN|     3920|      34|        1|\n|2008|    1|         3|           WN|      378|      25|        1|\n|2008|    1|         3|           WN|      509|      67|        1|\n|2008|    1|         3|           WN|      535|      -1|        0|\n|2008|    1|         3|           WN|       11|       2|        0|\n|2008|    1|         3|           WN|      810|       0|        0|\n+----+-----+----------+-------------+---------+--------+---------+\nonly showing top 10 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1522705180759_-1510495324",
+      "id": "20180402-213940_1880426423",
+      "dateCreated": "Apr 2, 2018 9:39:40 PM",
+      "dateStarted": "Apr 2, 2018 9:43:11 PM",
+      "dateFinished": "Apr 2, 2018 9:43:14 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Save Temporary View as Permanent Table",
+      "text": "%spark\nflightsWithDelays.write.format(\"orc\").mode(SaveMode.Overwrite).saveAsTable(\"flightswithdelaystbl\")",
+      "user": "anonymous",
+      "dateUpdated": "Apr 2, 2018 9:47:21 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1522705220730_-1285355920",
+      "id": "20180402-214020_1564129682",
+      "dateCreated": "Apr 2, 2018 9:40:20 PM",
+      "dateStarted": "Apr 2, 2018 9:47:18 PM",
+      "dateFinished": "Apr 2, 2018 9:47:23 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark.sql\nSHOW TABLES",
+      "user": "anonymous",
+      "dateUpdated": "Apr 2, 2018 9:48:06 PM",
+      "config": {
+        "colWidth": 11.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 105.533,
+              "optionOpen": false
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "sql"
+        },
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "database\ttableName\tisTemporary\ndefault\tflightswithdelaystbl\tfalse\n\tflightsview\ttrue\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1522705494447_-660343629",
+      "id": "20180402-214454_948358992",
+      "dateCreated": "Apr 2, 2018 9:44:54 PM",
+      "dateStarted": "Apr 2, 2018 9:47:54 PM",
+      "dateFinished": "Apr 2, 2018 9:47:54 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Permanent Tables saved to spark-warehouse",
+      "text": "%sh\nls spark-warehouse\n",
+      "user": "anonymous",
+      "dateUpdated": "Apr 2, 2018 9:49:12 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "sh",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/sh",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "flightswithdelaystbl\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1522705674149_-1548684511",
+      "id": "20180402-214754_1945069505",
+      "dateCreated": "Apr 2, 2018 9:47:54 PM",
+      "dateStarted": "Apr 2, 2018 9:48:39 PM",
+      "dateFinished": "Apr 2, 2018 9:48:39 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Query Permanent Table",
+      "text": "%spark.sql\n\nSELECT COUNT(1) AS Total from flightswithdelaystbl",
+      "user": "anonymous",
+      "dateUpdated": "Apr 2, 2018 9:50:29 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/sql",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "Total\n100000\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1522705694789_413781710",
+      "id": "20180402-214814_2019243093",
+      "dateCreated": "Apr 2, 2018 9:48:14 PM",
+      "dateStarted": "Apr 2, 2018 9:50:29 PM",
+      "dateFinished": "Apr 2, 2018 9:50:29 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n",
+      "user": "anonymous",
+      "dateUpdated": "Apr 2, 2018 9:50:14 PM",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1522705814799_-569667127",
+      "id": "20180402-215014_399255383",
+      "dateCreated": "Apr 2, 2018 9:50:14 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "exploratory/sparkSQL_QueryAPI",
+  "id": "2DBHVFPY4",
+  "angularObjects": {
+    "2D9M59UCD:shared_process": [],
+    "2DA8SNH69:shared_process": [],
+    "2DA7D9U54:shared_process": [],
+    "2D97KZFDV:shared_process": [],
+    "2DCM38RE1:shared_process": [],
+    "2DBW9MFP3:shared_process": [],
+    "2D9BWH5MV:shared_process": [],
+    "2DAPNMR44:shared_process": [],
+    "2DAE693FV:shared_process": [],
+    "2DBM3ED8T:shared_process": [],
+    "2DB7K6XQ2:shared_process": [],
+    "2DCHV2WWV:shared_process": [],
+    "2D9HF28RQ:shared_process": [],
+    "2D9EJAYAX:shared_process": [],
+    "2DANG6DXY:shared_process": [],
+    "2DA6K97N8:shared_process": [],
+    "2D9ZHSCRW:shared_process": [],
+    "2D9UU9EN5:shared_process": [],
+    "2DCJ61N3M:shared_process": []
+  },
+  "config": {},
+  "info": {}
+}
