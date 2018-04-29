@@ -1,0 +1,143 @@
+{
+  "paragraphs": [
+    {
+      "text": "// Newton Raphson Method for Root Finding",
+      "user": "anonymous",
+      "dateUpdated": "Apr 29, 2018 2:35:54 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1525012307147_-1464536676",
+      "id": "20180429-143147_1303889508",
+      "dateCreated": "Apr 29, 2018 2:31:47 PM",
+      "dateStarted": "Apr 29, 2018 2:35:54 PM",
+      "dateFinished": "Apr 29, 2018 2:35:55 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "def isGoodEnough(guess: Double, x: Double) \u003d \n    abs(guess * guess - x) / x \u003c 0.001   //relative to x\n  \n  \n def improve(guess: Double, x: Double) \u003d\n    (guess + x /guess) / 2  \n    \n\n@annotation.tailrec    \nfinal def sqrtIter(guess: Double, x: Double): Double \u003d if (isGoodEnough(guess, x)) guess else sqrtIter(improve(guess,x), x)\n    \n    \ndef sqrt(x: Double) \u003d sqrtIter(1.0, x)\n    ",
+      "user": "anonymous",
+      "dateUpdated": "Apr 29, 2018 2:57:02 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "isGoodEnough: (guess: Double, x: Double)Boolean\nimprove: (guess: Double, x: Double)Double\nsqrtIter: (guess: Double, x: Double)Double\nsqrt: (x: Double)Double\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1525012289516_753324550",
+      "id": "20180429-143129_205941394",
+      "dateCreated": "Apr 29, 2018 2:31:29 PM",
+      "dateStarted": "Apr 29, 2018 2:56:20 PM",
+      "dateFinished": "Apr 29, 2018 2:56:22 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "sqrt(4)\nsqrt(1e-6)\nsqrt(1e25)",
+      "user": "anonymous",
+      "dateUpdated": "Apr 29, 2018 2:56:28 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res177: Double \u003d 2.000609756097561\nres178: Double \u003d 0.0010000001533016628\nres179: Double \u003d 3.1623707616055664E12\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1525012568621_912809809",
+      "id": "20180429-143608_1602635603",
+      "dateCreated": "Apr 29, 2018 2:36:08 PM",
+      "dateStarted": "Apr 29, 2018 2:56:28 PM",
+      "dateFinished": "Apr 29, 2018 2:56:29 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "user": "anonymous",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1525013027275_1946672787",
+      "id": "20180429-144347_865009652",
+      "dateCreated": "Apr 29, 2018 2:43:47 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "fp/fp_principles_scala",
+  "id": "2DBU3WTXW",
+  "angularObjects": {
+    "2D9M59UCD:shared_process": [],
+    "2DA8SNH69:shared_process": [],
+    "2DA7D9U54:shared_process": [],
+    "2D97KZFDV:shared_process": [],
+    "2DCM38RE1:shared_process": [],
+    "2DBW9MFP3:shared_process": [],
+    "2D9BWH5MV:shared_process": [],
+    "2DAPNMR44:shared_process": [],
+    "2DAE693FV:shared_process": [],
+    "2DBM3ED8T:shared_process": [],
+    "2DB7K6XQ2:shared_process": [],
+    "2DCHV2WWV:shared_process": [],
+    "2D9HF28RQ:shared_process": [],
+    "2D9EJAYAX:shared_process": [],
+    "2DANG6DXY:shared_process": [],
+    "2DA6K97N8:shared_process": [],
+    "2D9ZHSCRW:shared_process": [],
+    "2D9UU9EN5:shared_process": [],
+    "2DCJ61N3M:shared_process": []
+  },
+  "config": {},
+  "info": {}
+}
