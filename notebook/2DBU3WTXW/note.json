@@ -1,39 +1,10 @@
 {
   "paragraphs": [
     {
-      "text": "// Newton Raphson Method for Root Finding",
-      "user": "anonymous",
-      "dateUpdated": "Apr 29, 2018 2:35:54 PM",
-      "config": {
-        "colWidth": 12.0,
-        "enabled": true,
-        "results": {},
-        "editorSetting": {
-          "language": "scala"
-        },
-        "editorMode": "ace/mode/scala"
-      },
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "results": {
-        "code": "SUCCESS",
-        "msg": []
-      },
-      "apps": [],
-      "jobName": "paragraph_1525012307147_-1464536676",
-      "id": "20180429-143147_1303889508",
-      "dateCreated": "Apr 29, 2018 2:31:47 PM",
-      "dateStarted": "Apr 29, 2018 2:35:54 PM",
-      "dateFinished": "Apr 29, 2018 2:35:55 PM",
-      "status": "FINISHED",
-      "progressUpdateIntervalMs": 500
-    },
-    {
+      "title": "Newton Raphson Method for Root Finding",
       "text": "def isGoodEnough(guess: Double, x: Double) \u003d \n    abs(guess * guess - x) / x \u003c 0.001   //relative to x\n  \n  \n def improve(guess: Double, x: Double) \u003d\n    (guess + x /guess) / 2  \n    \n\n@annotation.tailrec    \nfinal def sqrtIter(guess: Double, x: Double): Double \u003d if (isGoodEnough(guess, x)) guess else sqrtIter(improve(guess,x), x)\n    \n    \ndef sqrt(x: Double) \u003d sqrtIter(1.0, x)\n    ",
       "user": "anonymous",
-      "dateUpdated": "Apr 29, 2018 2:57:02 PM",
+      "dateUpdated": "Apr 29, 2018 4:03:30 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -41,7 +12,8 @@
         "editorSetting": {
           "language": "scala"
         },
-        "editorMode": "ace/mode/scala"
+        "editorMode": "ace/mode/scala",
+        "title": true
       },
       "settings": {
         "params": {},
@@ -101,6 +73,76 @@
       "progressUpdateIntervalMs": 500
     },
     {
+      "text": "def factorial(n: Int): BigInt \u003d {\n    @annotation.tailrec\n    def loop(acc: Int, n: Int): BigInt \u003d \n        if(n\u003d\u003d0) acc\n        else loop(acc * n, n-1)\n    loop(1,n)\n}",
+      "user": "anonymous",
+      "dateUpdated": "Apr 29, 2018 4:06:47 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "factorial: (n: Int)BigInt\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1525017859430_934776234",
+      "id": "20180429-160419_239960220",
+      "dateCreated": "Apr 29, 2018 4:04:19 PM",
+      "dateStarted": "Apr 29, 2018 4:06:47 PM",
+      "dateFinished": "Apr 29, 2018 4:06:48 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "factorial(30)",
+      "user": "anonymous",
+      "dateUpdated": "Apr 29, 2018 4:07:55 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res198: BigInt \u003d 1409286144\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1525017517635_1784780144",
+      "id": "20180429-155837_1088416238",
+      "dateCreated": "Apr 29, 2018 3:58:37 PM",
+      "dateStarted": "Apr 29, 2018 4:07:55 PM",
+      "dateFinished": "Apr 29, 2018 4:07:55 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
       "user": "anonymous",
       "config": {},
       "settings": {
@@ -108,9 +150,9 @@
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1525013027275_1946672787",
-      "id": "20180429-144347_865009652",
-      "dateCreated": "Apr 29, 2018 2:43:47 PM",
+      "jobName": "paragraph_1525017672663_355669487",
+      "id": "20180429-160112_1590419971",
+      "dateCreated": "Apr 29, 2018 4:01:12 PM",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }
