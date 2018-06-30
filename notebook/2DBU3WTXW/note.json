@@ -4,15 +4,16 @@
       "title": "Newton Raphson Method for Root Finding",
       "text": "def isGoodEnough(guess: Double, x: Double) \u003d \n    abs(guess * guess - x) / x \u003c 0.001   //relative to x\n  \n  \n def improve(guess: Double, x: Double) \u003d\n    (guess + x /guess) / 2  \n    \n\n@annotation.tailrec    \nfinal def sqrtIter(guess: Double, x: Double): Double \u003d if (isGoodEnough(guess, x)) guess else sqrtIter(improve(guess,x), x)\n    \n    \ndef sqrt(x: Double) \u003d sqrtIter(1.0, x)\n    ",
       "user": "anonymous",
-      "dateUpdated": "Apr 29, 2018 4:03:30 PM",
+      "dateUpdated": "Jun 30, 2018 7:25:33 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
-          "language": "scala"
+          "language": "text",
+          "editOnDblClick": false
         },
-        "editorMode": "ace/mode/scala",
+        "editorMode": "ace/mode/text",
         "title": true
       },
       "settings": {
@@ -143,6 +144,366 @@
       "progressUpdateIntervalMs": 500
     },
     {
+      "text": "%md\n## Merge Sort\n",
+      "user": "anonymous",
+      "dateUpdated": "Jun 30, 2018 7:24:58 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eMerge Sort\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1530386579486_2049599859",
+      "id": "20180630-192259_521015471",
+      "dateCreated": "Jun 30, 2018 7:22:59 PM",
+      "dateStarted": "Jun 30, 2018 7:24:58 PM",
+      "dateFinished": "Jun 30, 2018 7:24:58 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n\n//  def merge(xs: List[Int]. ys: List[Int]) \u003d xs match {\n//            case Nil \u003d\u003e ys\n//            case x::xs1 \u003d\u003e ys match {\n//                case Nil \u003d\u003e xs\n//                case y :: ys1 \u003d\u003e\n//                if (x \u003c y) x :: merge(xs1, ys)\n//                else y:: merge(xs, ys1)\n//            }\n//        }\n\nimport math.Ordering\n\n        \n\n\ndef msort[T](xs: List[T])(implicit ord: Ordering[T]): List[T] \u003d {\n    val n \u003d xs.length/2\n    if(n \u003d\u003d 0) xs\n    else {\n        def merge(xs: List[T], ys: List[T]): List[T] \u003d (xs, ys) match {\n            case (Nil, ys) \u003d\u003e ys\n            case (xs, Nil) \u003d\u003e xs\n            case (x :: xs1, y :: ys1) \u003d\u003e if (ord.lt(x, y)) x:: merge(xs1, ys) else y :: merge(xs, ys1)\n    }\n\n        val (fst, snd) \u003d xs splitAt n\n        merge(msort(fst), msort(snd))\n    }\n}\n",
+      "user": "anonymous",
+      "dateUpdated": "Jun 30, 2018 8:52:48 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import math.Ordering\nmsort: [T](xs: List[T])(implicit ord: scala.math.Ordering[T])List[T]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1530386670620_234293252",
+      "id": "20180630-192430_1731996679",
+      "dateCreated": "Jun 30, 2018 7:24:30 PM",
+      "dateStarted": "Jun 30, 2018 8:52:48 PM",
+      "dateFinished": "Jun 30, 2018 8:52:51 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val nums \u003d List(2,-4,5,7,1)\nmsort(nums)",
+      "user": "anonymous",
+      "dateUpdated": "Jun 30, 2018 8:52:55 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "nums: List[Int] \u003d List(2, -4, 5, 7, 1)\nres67: List[Int] \u003d List(-4, 1, 2, 5, 7)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1530386670308_440518662",
+      "id": "20180630-192430_78260690",
+      "dateCreated": "Jun 30, 2018 7:24:30 PM",
+      "dateStarted": "Jun 30, 2018 8:52:55 PM",
+      "dateFinished": "Jun 30, 2018 8:52:57 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val fruits \u003d List(\"apple\", \"pineapple\", \"orange\", \"banana\")\nmsort(fruits)\n",
+      "user": "anonymous",
+      "dateUpdated": "Jun 30, 2018 8:52:59 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "fruits: List[String] \u003d List(apple, pineapple, orange, banana)\nres68: List[String] \u003d List(apple, banana, orange, pineapple)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1530386669964_769863721",
+      "id": "20180630-192429_1247009021",
+      "dateCreated": "Jun 30, 2018 7:24:29 PM",
+      "dateStarted": "Jun 30, 2018 8:52:59 PM",
+      "dateFinished": "Jun 30, 2018 8:53:01 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n## Higher Order List Functions\n",
+      "user": "anonymous",
+      "dateUpdated": "Jun 30, 2018 8:56:07 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eHigher Order List Functions\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1530386669382_1329658046",
+      "id": "20180630-192429_1907419218",
+      "dateCreated": "Jun 30, 2018 7:24:29 PM",
+      "dateStarted": "Jun 30, 2018 8:56:07 PM",
+      "dateFinished": "Jun 30, 2018 8:56:07 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "// similar appraoch to a map\ndef scaleList(xs: List[Double], factor: Double): List[Double] \u003d xs match {\n    case Nil \u003d\u003e xs\n    case y :: ys \u003d\u003e y * factor :: scaleList(ys, factor)\n}",
+      "user": "anonymous",
+      "dateUpdated": "Jun 30, 2018 8:59:36 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "scaleList: (xs: List[Double], factor: Double)List[Double]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1530392167346_-1780979925",
+      "id": "20180630-205607_982356323",
+      "dateCreated": "Jun 30, 2018 8:56:07 PM",
+      "dateStarted": "Jun 30, 2018 8:58:10 PM",
+      "dateFinished": "Jun 30, 2018 8:58:10 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "scaleList(List(2.0,5.3,6.7), 4)",
+      "user": "anonymous",
+      "dateUpdated": "Jun 30, 2018 8:59:10 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res71: List[Double] \u003d List(8.0, 21.2, 26.8)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1530392174732_-538610402",
+      "id": "20180630-205614_1226453962",
+      "dateCreated": "Jun 30, 2018 8:56:14 PM",
+      "dateStarted": "Jun 30, 2018 8:59:10 PM",
+      "dateFinished": "Jun 30, 2018 8:59:11 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "def squareList(xs: List[Int]): List[Int] \u003d\n    xs map (x \u003d\u003e x*x)\n    \n    \nsquareList(nums)",
+      "user": "anonymous",
+      "dateUpdated": "Jun 30, 2018 9:03:17 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "squareList: (xs: List[Int])List[Int]\nres74: List[Int] \u003d List(4, 16, 25, 49, 1)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1530392174233_98518452",
+      "id": "20180630-205614_1070802328",
+      "dateCreated": "Jun 30, 2018 8:56:14 PM",
+      "dateStarted": "Jun 30, 2018 9:03:17 PM",
+      "dateFinished": "Jun 30, 2018 9:03:19 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "def pack[T](xs: List[T]): List[List[T]] \u003d xs match {\n    case Nil \u003d\u003e Nil\n    case x :: xs1 \u003d\u003e\n        val (first, rest) \u003d xs span (y \u003d\u003e y \u003d\u003d x)\n        first :: pack(rest)\n}\n\n\nval letters \u003d List(\"a\",\"a\", \"a\", \"b\", \"b\",\"c\",\"c\", \"a\")\npack(letters)\n",
+      "user": "anonymous",
+      "dateUpdated": "Jun 30, 2018 9:14:21 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "pack: [T](xs: List[T])List[List[T]]\nletters: List[String] \u003d List(a, a, a, b, b, c, c, a)\nres77: List[List[String]] \u003d List(List(a, a, a), List(b, b), List(c, c), List(a))\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1530392451098_852239903",
+      "id": "20180630-210051_963286191",
+      "dateCreated": "Jun 30, 2018 9:00:51 PM",
+      "dateStarted": "Jun 30, 2018 9:14:21 PM",
+      "dateFinished": "Jun 30, 2018 9:14:23 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "def encode[T](xs: List[T]): List[(T,Int)] \u003d\n    pack(xs) map ( ys \u003d\u003e (ys.head, ys.length) )\n    \n    \nencode(letters)",
+      "user": "anonymous",
+      "dateUpdated": "Jun 30, 2018 9:23:11 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "encode: [T](xs: List[T])List[(T, Int)]\nres80: List[(String, Int)] \u003d List((a,3), (b,2), (c,2), (a,1))\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1530392450715_-477837044",
+      "id": "20180630-210050_1300075905",
+      "dateCreated": "Jun 30, 2018 9:00:50 PM",
+      "dateStarted": "Jun 30, 2018 9:23:11 PM",
+      "dateFinished": "Jun 30, 2018 9:23:14 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
       "user": "anonymous",
       "config": {},
       "settings": {
@@ -150,9 +511,51 @@
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1525017672663_355669487",
-      "id": "20180429-160112_1590419971",
-      "dateCreated": "Apr 29, 2018 4:01:12 PM",
+      "jobName": "paragraph_1530392450345_-250835193",
+      "id": "20180630-210050_743909311",
+      "dateCreated": "Jun 30, 2018 9:00:50 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "user": "anonymous",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1530392450057_-337018947",
+      "id": "20180630-210050_681208022",
+      "dateCreated": "Jun 30, 2018 9:00:50 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "user": "anonymous",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1530392448746_-1308509920",
+      "id": "20180630-210048_684873742",
+      "dateCreated": "Jun 30, 2018 9:00:48 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "user": "anonymous",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1530392448413_-972624130",
+      "id": "20180630-210048_1629524425",
+      "dateCreated": "Jun 30, 2018 9:00:48 PM",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }
@@ -160,25 +563,25 @@
   "name": "fp/fp_principles_scala",
   "id": "2DBU3WTXW",
   "angularObjects": {
-    "2D9M59UCD:shared_process": [],
-    "2DA8SNH69:shared_process": [],
-    "2DA7D9U54:shared_process": [],
-    "2D97KZFDV:shared_process": [],
-    "2DCM38RE1:shared_process": [],
-    "2DBW9MFP3:shared_process": [],
-    "2D9BWH5MV:shared_process": [],
-    "2DAPNMR44:shared_process": [],
-    "2DAE693FV:shared_process": [],
-    "2DBM3ED8T:shared_process": [],
-    "2DB7K6XQ2:shared_process": [],
-    "2DCHV2WWV:shared_process": [],
-    "2D9HF28RQ:shared_process": [],
-    "2D9EJAYAX:shared_process": [],
-    "2DANG6DXY:shared_process": [],
-    "2DA6K97N8:shared_process": [],
-    "2D9ZHSCRW:shared_process": [],
-    "2D9UU9EN5:shared_process": [],
-    "2DCJ61N3M:shared_process": []
+    "2DGUKUFBU:shared_process": [],
+    "2DKJDGZXR:shared_process": [],
+    "2DHVQB3QK:shared_process": [],
+    "2DHC8YH42:shared_process": [],
+    "2DJEBWX7W:shared_process": [],
+    "2DJDGJTT2:shared_process": [],
+    "2DHQY5GE7:shared_process": [],
+    "2DJK8K7N7:shared_process": [],
+    "2DJ9HAZFH:shared_process": [],
+    "2DKCZGMMC:shared_process": [],
+    "2DKXFKMCU:shared_process": [],
+    "2DGUUBCJE:shared_process": [],
+    "2DK99482H:shared_process": [],
+    "2DGXRW4MT:shared_process": [],
+    "2DKU76U6S:shared_process": [],
+    "2DH2A7C4A:shared_process": [],
+    "2DJ8YEM1R:shared_process": [],
+    "2DJF9SV8M:shared_process": [],
+    "2DKC4UDUJ:shared_process": []
   },
   "config": {},
   "info": {}
